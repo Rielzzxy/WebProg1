@@ -1,0 +1,49 @@
+public class Product {
+    private String name;
+    private double price;
+    private int quantity;
+
+    
+     public Product(String name, double price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+public class Cashier {
+        private List<Product> cart;
+        
+        public Cashier() {
+            cart = new ArrayList<>();
+        }
+    
+        public void addProductToCart(Product product) {
+            cart.add(product);
+        }
+    
+        public double calculateTotal() {
+            double total = 0;
+            for (Product p : cart) {
+                total += p.getPrice();
+            }
+            return total;
+        }
+    
+        // Metode lain untuk penghapusan item dari keranjang, dsb.
+    }
+    public class Transaction {
+        private double totalAmount;
+        private double paidAmount;
+        private double change;
+    
+        public Transaction(double totalAmount, double paidAmount) {
+            this.totalAmount = totalAmount;
+            this.paidAmount = paidAmount;
+            this.change = paidAmount - totalAmount;
+        }
+    
+        // Getter untuk melihat detail transaksi
+    }
+        
+    // Getter dan Setter
+}

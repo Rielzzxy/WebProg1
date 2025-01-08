@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ann's Cafe - Menu dan Promo</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- Kontainer utama untuk konten menu dan promo -->
+    <div class="container">
+        <h1>Ann's cafe</h1>
+        <div class="menu-section">
+            <h2>Menu</h2>
+            <ul id="menu-list" class="menu-list"></ul>
+        </div>
+
+        <div class="promo-section">
+            <h2>Promo Bundling</h2>
+            <ul id="promo-list" class="promo-list"></ul>
+        </div>
+
+        <div class="pesanan-section">
+            <h2>Pesanan Anda</h2>
+            <ul id="pesanan-list" class="pesanan-list"></ul>
+            <p class="total-harga">Total: <span id="total-harga">Rp0</span></p>
+        </div>
+
+        <div class="payment-section">
+            <h2>Pembayaran</h2>
+            <select id="metode-pembayaran">
+                <option value="tunai">Tunai</option>
+                <option value="kartu">Kartu</option>
+                <option value="e-wallet">E-Wallet</option>
+            </select>
+            <input type="number" id="uang-dibayar" placeholder="Uang yang dibayarkan">
+            <button onclick="bayar()">Bayar</button>
+            <p id="kembalian-output" class="kembalian-output"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
